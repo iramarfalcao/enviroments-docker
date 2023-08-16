@@ -1,0 +1,12 @@
+version: "3"
+
+services: 
+  jupyter:
+    image: ghcr.io/knonm/kotlin-notebook
+    ports: 
+      - "8888:8888"
+    environment: 
+      - JUPYTER_ENABLE_LAB=yes
+      - CHOWN_HOME=yes
+    volumes: 
+      - .:/home/jovyan/workspace
